@@ -1,0 +1,14 @@
+
+version: 2
+
+models:
+  - name: stg_public__articles
+    description: ""
+    columns:
+      - name: article_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: department
+        description: ""

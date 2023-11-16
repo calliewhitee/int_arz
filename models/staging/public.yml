@@ -1,0 +1,70 @@
+version: 2
+
+sources:
+  - name: public
+    description: ""
+    database: aritzia_int
+    schema: public
+    tables:
+      - name: article_master
+        description: ""
+        columns:
+          - name: department
+            description: "" 
+          - name: material
+            description: ""
+            tests:
+              - not_null
+              - unique
+      - name: transactions
+        description: "" 
+        columns:
+          - name: article_id
+            description: ""
+          - name: action_code
+            description: ""
+          - name: device_code
+            description: ""
+          - name: inventory_detail_number
+            description: ""
+          - name: from_area_code
+            description: ""
+          - name: from_storage_location
+            description: ""
+          - name: gift_flag
+            description: "" 
+          - name: order_line_item
+            description: ""
+          - name: order_number
+            description: ""
+          - name: order_type
+            description: ""
+          - name: order_category
+            description: ""
+          - name: order_type_category
+            description: ""
+          - name: order_channel
+            description: ""
+          - name: quantity
+            description: ""
+          - name: ship_line_id
+            description: ""
+          - name: to_area_code
+            description: "" 
+          - name: to_storage_location
+            description: "" 
+          - name: transaction_at
+            description: "" 
+          - name: transaction_date
+            description: "" 
+          - name: transaction_id
+            description: ""
+            tests:
+              - unique
+              - not_null
+          - name: user_id
+            description: ""
+          - name: warehouse_id
+            description: ""
+          
+           
