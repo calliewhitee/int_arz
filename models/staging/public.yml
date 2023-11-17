@@ -19,7 +19,7 @@ sources:
       - name: transactions
         description: "" 
         columns:
-          - name: article_id
+          - name: articles_id
             description: ""
           - name: action_code
             description: ""

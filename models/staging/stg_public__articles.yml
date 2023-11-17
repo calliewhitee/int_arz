@@ -5,7 +5,7 @@ models:
   - name: stg_public__articles
     description: ""
     columns:
-      - name: article_id
+      - name: articles_id
         description: ""
         tests:
           - unique

@@ -6,7 +6,7 @@ with transactions_source as (
         transaction_id,
         warehouse_id, 
         regexp_replace(user_id, '(USER)', '') as user_id,
-        article as article_id,
+        article as articles_id,
         ship_line_id,
 
         --Code Identifiers/Categorizations
@@ -26,8 +26,7 @@ with transactions_source as (
         gift_flag,
 
         --Date/Time Fields
-        transaction_timestamp as transaction_at, 
-        '2021-11-02' as transaction_date,
+        '2021-11-02'::date + transaction_timestamp as transaction_at, 
         --the data import had issues reading the raw data file and set the date to Nov 21, 2023
         -- manually overwritting for the purposes here because the date is consistent but wouldn't do this in production
         

@@ -14,7 +14,7 @@ models:
         description: ""
       - name: user_id
         description: ""
-      - name: article_id
+      - name: articles_id
         description: ""
       - name: ship_line_id
         description: ""
