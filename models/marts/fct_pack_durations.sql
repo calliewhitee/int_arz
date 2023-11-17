@@ -42,6 +42,11 @@ with transactions_source as (
     from group_user_order
 ), calculate_duration_difference as (
     select
+        {{ dbt_utils.generate_surrogate_key(
+            ['user_id',
+            'order_start_at'
+            ]
+        ) }} as pack_duration_id,
         *,
         total_packing_standard_seconds - order_pack_duration_seconds as difference_to_standard
     from calculate_duration

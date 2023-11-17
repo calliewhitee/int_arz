@@ -1,0 +1,32 @@
+
+version: 2
+
+models:
+  - name: fct_pack_durations
+    description: ""
+    columns:
+      - name: pack_duration_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+        description: ""
+        tests:
+          - not_null
+      - name: order_start_at
+        description: ""
+        tests:
+          - not_null
+      - name: order_end_at
+        description: ""
+      - name: item_departments
+        description: ""
+      - name: number_of_items
+        description: ""
+      - name: total_packing_standard_seconds
+        description: ""
+      - name: order_pack_duration_seconds
+        description: ""
+      - name: difference_to_standard
+        description: ""
