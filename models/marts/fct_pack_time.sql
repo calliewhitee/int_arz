@@ -7,5 +7,7 @@ with transactions_source as (
     select *
     from transactions_source
         left join articles_source
-            on transactions_source.article_id = stg_public__articles.article_id
+            on transactions_source.article_id = articles_source.article_id
 )
+
+select * from joined_tables

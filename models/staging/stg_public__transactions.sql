@@ -5,7 +5,7 @@ with transactions_source as (
         --ID fields starting with primary key, then forgein keys 
         transaction_id,
         warehouse_id, 
-        substring(user_id, 5, length(user_id)) as user_id,
+        regexp_replace(user_id, '(USER)', '') as user_id,
         article as article_id,
         ship_line_id,
 
@@ -27,7 +27,7 @@ with transactions_source as (
 
         --Date/Time Fields
         transaction_timestamp as transaction_at, 
-        '2023-11-02' as transaction_date,
+        '2021-11-02' as transaction_date,
         --the data import had issues reading the raw data file and set the date to Nov 21, 2023
         -- manually overwritting for the purposes here because the date is consistent but wouldn't do this in production
         
